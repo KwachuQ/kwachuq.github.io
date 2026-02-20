@@ -490,6 +490,37 @@
       .btn { justify-content: center; }
     }
 
+    /* ── Contact Form ──────────────────────────────────── */
+    .contact-form {
+      max-width: 520px;
+      margin: 32px auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      text-align: left;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      color: var(--text);
+      font-family: var(--font);
+      font-size: .9rem;
+      transition: border-color .2s;
+      resize: vertical;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: var(--text-dim);
+    }
+
     /* ── Animations ────────────────────────────────────── */
     .fade-in {
       opacity: 0;
@@ -865,8 +896,27 @@
       <p class="section-subtitle fade-in" style="text-align: center;">
         Interested in working together? Feel free to reach out.
       </p>
-      <div class="fade-in" style="margin-top: 8px;">
-        <a href="https://github.com/KwachuQ" target="_blank" rel="noopener" class="btn btn-primary">
+
+      <!-- Contact Form -->
+      <form class="contact-form fade-in" id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;">
+          <i class="fa-solid fa-paper-plane"></i> Send Message
+        </button>
+        <p id="form-status" style="margin-top: 12px; font-size: .85rem;"></p>
+      </form>
+
+      <div class="fade-in" style="margin-top: 24px;">
+        <span style="color: var(--text-dim); font-size: .85rem;">or reach me directly at</span><br>
+        <a href="mailto:lkwasniewskii@gmail.com" style="font-family: var(--mono); font-size: .95rem;">
+          lkwasniewskii@gmail.com
+        </a>
+      </div>
+
+      <div class="fade-in" style="margin-top: 24px;">
+        <a href="https://github.com/KwachuQ" target="_blank" rel="noopener" class="btn btn-outline">
           <i class="fa-brands fa-github"></i> View My GitHub
         </a>
       </div>
@@ -914,6 +964,19 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Contact form → mailto fallback
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = e.target.name.value.trim();
+      const email = e.target.email.value.trim();
+      const message = e.target.message.value.trim();
+      const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
+      const body = encodeURIComponent(`From: ${name} (${email})\n\n${message}`);
+      window.location.href = `mailto:lkwasniewskii@gmail.com?subject=${subject}&body=${body}`;
+      document.getElementById('form-status').textContent = 'Opening your email client…';
+      document.getElementById('form-status').style.color = 'var(--accent)';
+    });
   </script>
 </body>
 </html>
