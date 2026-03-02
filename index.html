@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Łukasz Kwaśniewski — Data Engineer & Python Developer | lukaszkwasniewski.dev</title>
-  <meta name="description" content="Portfolio of Łukasz Kwaśniewski – Data Engineer specializing in Python, ETL pipelines, and football analytics. lukaszkwasniewski.dev">
+  <title>Łukasz Kwaśniewski — Data Engineer, Data Analyst & Python Developer | lukaszkwasniewski.dev</title>
+  <meta name="description"
+    content="Portfolio of Łukasz Kwaśniewski – Data Engineer and Data Analyst specializing in Python, ETL pipelines, and football analytics. lukaszkwasniewski.dev">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <style>
     /* ── Reset & Base ─────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --bg:        #0f1117;
-      --bg-card:   #1a1d27;
-      --bg-card-hover: #21242f;
-      --border:    #2a2d3a;
-      --text:      #e1e4ed;
-      --text-dim:  #8b8fa3;
-      --accent:    #22C55E;
-      --accent-2:  #00C9A7;
-      --accent-3:  #FF6B6B;
-      --accent-4:  #FFD93D;
-      --font:      'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --mono:      'JetBrains Mono', 'Fira Code', monospace;
-      --max-w:     1120px;
-      --radius:    12px;
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html { scroll-behavior: smooth; }
+    :root {
+      --bg: #0f1117;
+      --bg-card: #1a1d27;
+      --bg-card-hover: #21242f;
+      --border: #2a2d3a;
+      --text: #e1e4ed;
+      --text-dim: #8b8fa3;
+      --accent: #22C55E;
+      --accent-2: #00C9A7;
+      --accent-3: #FF6B6B;
+      --accent-4: #FFD93D;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --mono: 'JetBrains Mono', 'Fira Code', monospace;
+      --max-w: 1120px;
+      --radius: 12px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: var(--font);
@@ -39,12 +51,25 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    a { color: var(--accent); text-decoration: none; transition: color .2s; }
-    a:hover { color: #4ade80; }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color .2s;
+    }
 
-    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+    a:hover {
+      color: #4ade80;
+    }
 
-    section { padding: 80px 0; }
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    section {
+      padding: 80px 0;
+    }
 
     h2.section-title {
       font-size: 1.85rem;
@@ -53,6 +78,7 @@
       position: relative;
       display: inline-block;
     }
+
     h2.section-title::after {
       content: '';
       position: absolute;
@@ -63,6 +89,7 @@
       background: var(--accent);
       border-radius: 2px;
     }
+
     .section-subtitle {
       color: var(--text-dim);
       margin-bottom: 48px;
@@ -80,29 +107,50 @@
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
+
     nav .container {
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 64px;
     }
+
     nav .logo {
       font-weight: 700;
       font-size: 1.15rem;
       color: var(--text);
       font-family: var(--mono);
     }
-    nav .logo span { color: var(--accent); }
-    nav ul { list-style: none; display: flex; gap: 32px; }
+
+    nav .logo span {
+      color: var(--accent);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+    }
+
     nav ul li a {
       color: var(--text-dim);
       font-size: .875rem;
       font-weight: 500;
       transition: color .2s;
     }
-    nav ul li a:hover { color: var(--text); }
 
-    .nav-toggle { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+    nav ul li a:hover {
+      color: var(--text);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
 
     /* ── Hero ─────────────────────────────────────────── */
     .hero {
@@ -113,23 +161,34 @@
       position: relative;
       overflow: hidden;
     }
+
     .hero::before {
       content: '';
       position: absolute;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(34,197,94,.12) 0%, transparent 70%);
-      top: -100px; right: -200px;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(34, 197, 94, .12) 0%, transparent 70%);
+      top: -100px;
+      right: -200px;
       pointer-events: none;
     }
+
     .hero::after {
       content: '';
       position: absolute;
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(0,201,167,.08) 0%, transparent 70%);
-      bottom: -50px; left: -100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(0, 201, 167, .08) 0%, transparent 70%);
+      bottom: -50px;
+      left: -100px;
       pointer-events: none;
     }
-    .hero-content { position: relative; z-index: 1; }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
     .hero-greeting {
       font-family: var(--mono);
       color: var(--accent);
@@ -137,19 +196,25 @@
       margin-bottom: 12px;
       display: block;
     }
+
     .hero h1 {
       font-size: clamp(2.2rem, 5vw, 3.8rem);
       font-weight: 700;
       line-height: 1.15;
       margin-bottom: 8px;
     }
-    .hero h1 .highlight { color: var(--accent); }
+
+    .hero h1 .highlight {
+      color: var(--accent);
+    }
+
     .hero .tagline {
       font-size: clamp(1rem, 2.5vw, 1.35rem);
       color: var(--text-dim);
       font-weight: 400;
       margin-bottom: 24px;
     }
+
     .hero .bio {
       max-width: 560px;
       color: var(--text-dim);
@@ -157,7 +222,13 @@
       margin-bottom: 36px;
       line-height: 1.8;
     }
-    .hero-links { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .hero-links {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
     .btn {
       display: inline-flex;
       align-items: center;
@@ -170,21 +241,25 @@
       border: none;
       cursor: pointer;
     }
+
     .btn-primary {
       background: var(--accent);
       color: #fff;
     }
+
     .btn-primary:hover {
       background: #16a34a;
       color: #fff;
       transform: translateY(-2px);
-      box-shadow: 0 6px 24px rgba(34,197,94,.3);
+      box-shadow: 0 6px 24px rgba(34, 197, 94, .3);
     }
+
     .btn-outline {
       background: transparent;
       color: var(--text);
       border: 1.5px solid var(--border);
     }
+
     .btn-outline:hover {
       border-color: var(--accent);
       color: var(--accent);
@@ -198,17 +273,23 @@
       gap: 48px;
       align-items: start;
     }
+
     .about-text p {
       color: var(--text-dim);
       margin-bottom: 16px;
       font-size: .95rem;
     }
-    .about-text p strong { color: var(--text); }
+
+    .about-text p strong {
+      color: var(--text);
+    }
+
     .about-highlights {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 16px;
     }
+
     .highlight-card {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -217,10 +298,12 @@
       text-align: center;
       transition: border-color .3s, transform .3s;
     }
+
     .highlight-card:hover {
       border-color: var(--accent);
       transform: translateY(-4px);
     }
+
     .highlight-card .number {
       font-size: 2rem;
       font-weight: 700;
@@ -228,6 +311,7 @@
       display: block;
       font-family: var(--mono);
     }
+
     .highlight-card .label {
       font-size: .8rem;
       color: var(--text-dim);
@@ -242,6 +326,7 @@
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 24px;
     }
+
     .skill-category {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -249,10 +334,12 @@
       padding: 28px;
       transition: border-color .3s, transform .3s;
     }
+
     .skill-category:hover {
       border-color: var(--accent);
       transform: translateY(-4px);
     }
+
     .skill-category h3 {
       font-size: 1rem;
       font-weight: 600;
@@ -261,40 +348,94 @@
       align-items: center;
       gap: 10px;
     }
+
     .skill-category h3 i {
       font-size: 1.1rem;
       width: 24px;
       text-align: center;
     }
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
     .skill-tag {
-      background: rgba(34,197,94,.1);
+      background: rgba(34, 197, 94, .1);
       color: var(--accent);
       padding: 6px 14px;
       border-radius: 20px;
       font-size: .8rem;
       font-weight: 500;
-      border: 1px solid rgba(34,197,94,.2);
+      border: 1px solid rgba(34, 197, 94, .2);
       transition: all .2s;
     }
+
     .skill-tag:hover {
-      background: rgba(34,197,94,.2);
+      background: rgba(34, 197, 94, .2);
       border-color: var(--accent);
     }
-    .skill-cat-de h3 i { color: var(--accent); }
-    .skill-cat-py h3 i { color: var(--accent-2); }
-    .skill-cat-py .skill-tag { background: rgba(0,201,167,.1); color: var(--accent-2); border-color: rgba(0,201,167,.2); }
-    .skill-cat-py .skill-tag:hover { background: rgba(0,201,167,.2); border-color: var(--accent-2); }
-    .skill-cat-web h3 i { color: var(--accent-3); }
-    .skill-cat-web .skill-tag { background: rgba(255,107,107,.1); color: var(--accent-3); border-color: rgba(255,107,107,.2); }
-    .skill-cat-web .skill-tag:hover { background: rgba(255,107,107,.2); border-color: var(--accent-3); }
-    .skill-cat-devops h3 i { color: var(--accent-4); }
-    .skill-cat-devops .skill-tag { background: rgba(255,217,61,.1); color: var(--accent-4); border-color: rgba(255,217,61,.2); }
-    .skill-cat-devops .skill-tag:hover { background: rgba(255,217,61,.2); border-color: var(--accent-4); }
+
+    .skill-cat-de h3 i {
+      color: var(--accent);
+    }
+
+    .skill-cat-py h3 i {
+      color: var(--accent-2);
+    }
+
+    .skill-cat-py .skill-tag {
+      background: rgba(0, 201, 167, .1);
+      color: var(--accent-2);
+      border-color: rgba(0, 201, 167, .2);
+    }
+
+    .skill-cat-py .skill-tag:hover {
+      background: rgba(0, 201, 167, .2);
+      border-color: var(--accent-2);
+    }
+
+    .skill-cat-web h3 i {
+      color: var(--accent-3);
+    }
+
+    .skill-cat-web .skill-tag {
+      background: rgba(255, 107, 107, .1);
+      color: var(--accent-3);
+      border-color: rgba(255, 107, 107, .2);
+    }
+
+    .skill-cat-web .skill-tag:hover {
+      background: rgba(255, 107, 107, .2);
+      border-color: var(--accent-3);
+    }
+
+    .skill-cat-devops h3 i {
+      color: var(--accent-4);
+    }
+
+    .skill-cat-devops .skill-tag {
+      background: rgba(255, 217, 61, .1);
+      color: var(--accent-4);
+      border-color: rgba(255, 217, 61, .2);
+    }
+
+    .skill-cat-devops .skill-tag:hover {
+      background: rgba(255, 217, 61, .2);
+      border-color: var(--accent-4);
+    }
 
     /* ── Projects ──────────────────────────────────────── */
-    #projects { background: linear-gradient(180deg, var(--bg) 0%, #12141c 100%); }
-    .projects-list { display: flex; flex-direction: column; gap: 32px; }
+    #projects {
+      background: linear-gradient(180deg, var(--bg) 0%, #12141c 100%);
+    }
+
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
 
     .project-card {
       background: var(--bg-card);
@@ -303,22 +444,26 @@
       overflow: hidden;
       transition: border-color .3s, transform .3s, box-shadow .3s;
     }
+
     .project-card:hover {
       border-color: var(--accent);
       transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(0,0,0,.3);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, .3);
     }
+
     .project-card-inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
       min-height: 340px;
     }
+
     .project-info {
       padding: 36px;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
+
     .project-label {
       font-family: var(--mono);
       font-size: .75rem;
@@ -327,33 +472,42 @@
       letter-spacing: 1.5px;
       margin-bottom: 8px;
     }
+
     .project-info h3 {
       font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 12px;
     }
+
     .project-info p {
       color: var(--text-dim);
       font-size: .9rem;
       margin-bottom: 20px;
       line-height: 1.7;
     }
+
     .project-tech {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       margin-bottom: 24px;
     }
+
     .project-tech span {
       font-family: var(--mono);
       font-size: .72rem;
       padding: 4px 12px;
       border-radius: 4px;
-      background: rgba(34,197,94,.08);
+      background: rgba(34, 197, 94, .08);
       color: var(--text-dim);
       border: 1px solid var(--border);
     }
-    .project-links { display: flex; gap: 16px; }
+
+    .project-links {
+      display: flex;
+      gap: 16px;
+    }
+
     .project-links a {
       font-size: .85rem;
       font-weight: 600;
@@ -361,6 +515,7 @@
       align-items: center;
       gap: 6px;
     }
+
     .project-visual {
       background: var(--bg);
       display: flex;
@@ -370,12 +525,14 @@
       position: relative;
       overflow: hidden;
     }
+
     .project-visual::before {
       content: '';
       position: absolute;
       inset: 0;
       opacity: .06;
     }
+
     .project-diagram {
       font-family: var(--mono);
       font-size: .75rem;
@@ -385,16 +542,32 @@
       position: relative;
       z-index: 1;
     }
-    .project-diagram .accent { color: var(--accent); }
-    .project-diagram .green { color: var(--accent-2); }
-    .project-diagram .red { color: var(--accent-3); }
-    .project-diagram .yellow { color: var(--accent-4); }
-    .project-diagram .dim { color: #555; }
+
+    .project-diagram .accent {
+      color: var(--accent);
+    }
+
+    .project-diagram .green {
+      color: var(--accent-2);
+    }
+
+    .project-diagram .red {
+      color: var(--accent-3);
+    }
+
+    .project-diagram .yellow {
+      color: var(--accent-4);
+    }
+
+    .project-diagram .dim {
+      color: #555;
+    }
 
     /* ── GitHub Activity ───────────────────────────────── */
     .github-section {
       text-align: center;
     }
+
     .github-stats {
       display: flex;
       justify-content: center;
@@ -402,6 +575,7 @@
       flex-wrap: wrap;
       margin-bottom: 36px;
     }
+
     .github-stat {
       background: var(--bg-card);
       border: 1px solid var(--border);
@@ -410,10 +584,12 @@
       min-width: 180px;
       transition: border-color .3s, transform .3s;
     }
+
     .github-stat:hover {
       border-color: var(--accent);
       transform: translateY(-4px);
     }
+
     .github-stat .number {
       font-size: 2.2rem;
       font-weight: 700;
@@ -421,6 +597,7 @@
       font-family: var(--mono);
       display: block;
     }
+
     .github-stat .label {
       color: var(--text-dim);
       font-size: .8rem;
@@ -428,9 +605,11 @@
       letter-spacing: .5px;
       margin-top: 4px;
     }
+
     .github-graph {
       margin-top: 32px;
     }
+
     .github-graph img {
       max-width: 100%;
       border-radius: var(--radius);
@@ -442,18 +621,25 @@
       padding: 40px 0;
       text-align: center;
     }
+
     footer .footer-links {
       display: flex;
       justify-content: center;
       gap: 24px;
       margin-bottom: 16px;
     }
+
     footer .footer-links a {
       color: var(--text-dim);
       font-size: 1.2rem;
       transition: color .2s, transform .2s;
     }
-    footer .footer-links a:hover { color: var(--accent); transform: translateY(-2px); }
+
+    footer .footer-links a:hover {
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
     footer p {
       color: var(--text-dim);
       font-size: .8rem;
@@ -461,14 +647,28 @@
 
     /* ── Responsive ────────────────────────────────────── */
     @media (max-width: 900px) {
-      .project-card-inner { grid-template-columns: 1fr; }
-      .project-visual { min-height: 200px; }
-      .about-grid { grid-template-columns: 1fr; }
+      .project-card-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .project-visual {
+        min-height: 200px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 640px) {
-      section { padding: 60px 0; }
-      nav ul { display: none; }
+      section {
+        padding: 60px 0;
+      }
+
+      nav ul {
+        display: none;
+      }
+
       nav ul.open {
         display: flex;
         flex-direction: column;
@@ -476,18 +676,37 @@
         top: 64px;
         left: 0;
         right: 0;
-        background: rgba(15,17,23,.97);
+        background: rgba(15, 17, 23, .97);
         backdrop-filter: blur(12px);
         padding: 24px;
         gap: 16px;
         border-bottom: 1px solid var(--border);
       }
-      .nav-toggle { display: block; }
-      .about-highlights { grid-template-columns: 1fr; }
-      .skills-grid { grid-template-columns: 1fr; }
-      .github-stats { flex-direction: column; align-items: center; }
-      .hero-links { flex-direction: column; }
-      .btn { justify-content: center; }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .about-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .github-stats {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-links {
+        flex-direction: column;
+      }
+
+      .btn {
+        justify-content: center;
+      }
     }
 
     /* ── Contact Form ──────────────────────────────────── */
@@ -499,6 +718,7 @@
       gap: 16px;
       text-align: left;
     }
+
     .contact-form input,
     .contact-form textarea {
       background: var(--bg-card);
@@ -511,11 +731,13 @@
       transition: border-color .2s;
       resize: vertical;
     }
+
     .contact-form input:focus,
     .contact-form textarea:focus {
       outline: none;
       border-color: var(--accent);
     }
+
     .contact-form input::placeholder,
     .contact-form textarea::placeholder {
       color: var(--text-dim);
@@ -527,12 +749,14 @@
       transform: translateY(24px);
       transition: opacity .6s ease, transform .6s ease;
     }
+
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
     }
   </style>
 </head>
+
 <body>
   <!-- ─── Navigation ──────────────────────────────────── -->
   <nav>
@@ -557,7 +781,7 @@
       <div class="hero-content">
         <span class="hero-greeting">Hi, my name is</span>
         <h1>Łukasz <span class="highlight">Kwaśniewski</span></h1>
-        <p class="tagline">Data Engineer &bull; Python Developer &bull; Football Analytics</p>
+        <p class="tagline">Data Engineer &bull; Data Analyst &bull; Python Developer &bull; Football Analytics</p>
         <p class="bio">
           Professional trader turning a deep passion for data and football analytics
           into production-grade data engineering projects. I build end-to-end pipelines,
@@ -597,9 +821,16 @@
             modern AI-assisted development workflows.
           </p>
           <p>
-            I'm looking for opportunities in <strong>Data Engineering</strong> or <strong>Python Development</strong>
+            Beyond building robust infrastructure, I deeply enjoy the <strong>data analysis</strong> aspect of my work.
+            Whether it is exploring advanced football data, evaluating performance trends in my trading journal,
+            or designing interactive visualizations with Streamlit and Plotly, I thrive on translating raw datasets into
+            actionable insights.
+          </p>
+          <p>
+            I'm looking for opportunities in <strong>Data Engineering</strong>, <strong>Data Analysis</strong>, or
+            <strong>Python Development</strong>
             where I can apply my analytical mindset, self-taught programming skills, and relentless
-            drive to learn and ship quality software.
+            drive to discover insights and ship quality software.
           </p>
         </div>
         <div class="about-highlights fade-in">
@@ -695,7 +926,8 @@
               <h3>Football Data Pipeline</h3>
               <p>
                 End-to-end ELT pipeline for ingesting, modeling, and serving football statistics
-                from the SofaScore API. Uses a <strong>medallion architecture</strong> (Bronze &rarr; Silver &rarr; Gold)
+                from the SofaScore API. Uses a <strong>medallion architecture</strong> (Bronze &rarr; Silver &rarr;
+                Gold)
                 orchestrated with Airflow, stored in MinIO/PostgreSQL, and transformed via dbt.
                 Supports 20+ European leagues with both historical backfill and incremental
                 daily updates. Produces 13 analytical mart tables for BI exploration.
@@ -718,22 +950,23 @@
             </div>
             <div class="project-visual">
               <div class="project-diagram">
-<span class="accent">SofaScore API</span>
-     <span class="dim">│</span>
-     <span class="dim">▼</span>
- <span class="yellow">[ Airflow ]</span> ── orchestration
-     <span class="dim">│</span>
-     <span class="dim">▼</span>
- <span class="red">Bronze</span> ── raw JSON → MinIO
-     <span class="dim">│</span>
-     <span class="dim">▼</span>
- <span class="yellow">Silver</span> ── cleaned → PostgreSQL
-     <span class="dim">│</span>
-     <span class="dim">▼</span>
- <span class="green">Gold</span>   ── dbt marts (13 tables)
-     <span class="dim">│</span>
-     <span class="dim">▼</span>
- <span class="accent">Metabase</span> ── dashboards &amp; BI</div>
+                <span class="accent">SofaScore API</span>
+                <span class="dim">│</span>
+                <span class="dim">▼</span>
+                <span class="yellow">[ Airflow ]</span> ── orchestration
+                <span class="dim">│</span>
+                <span class="dim">▼</span>
+                <span class="red">Bronze</span> ── raw JSON → MinIO
+                <span class="dim">│</span>
+                <span class="dim">▼</span>
+                <span class="yellow">Silver</span> ── cleaned → PostgreSQL
+                <span class="dim">│</span>
+                <span class="dim">▼</span>
+                <span class="green">Gold</span> ── dbt marts (13 tables)
+                <span class="dim">│</span>
+                <span class="dim">▼</span>
+                <span class="accent">Metabase</span> ── dashboards &amp; BI
+              </div>
             </div>
           </div>
         </div>
@@ -765,28 +998,37 @@
                 <a href="https://github.com/KwachuQ/Football-dashboard-app" target="_blank" rel="noopener">
                   <i class="fa-brands fa-github"></i> Source Code
                 </a>
-                <a href="https://football-dashboard-app.streamlit.app/Home" target="_blank" rel="noopener" style="color: var(--accent-2);">
+                <a href="https://football-dashboard-app.streamlit.app/Home" target="_blank" rel="noopener"
+                  style="color: var(--accent-2);">
                   <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
                 </a>
               </div>
             </div>
             <div class="project-visual">
               <div class="project-diagram">
-<span class="accent">┌─────────────────────────┐</span>
-<span class="accent">│</span>  <span class="green">Streamlit Dashboard</span>    <span class="accent">│</span>
-<span class="accent">├─────────────────────────┤</span>
-<span class="accent">│</span>                         <span class="accent">│</span>
-<span class="accent">│</span>  <span class="yellow">📊</span> Home & League Stats  <span class="accent">│</span>
-<span class="accent">│</span>  <span class="yellow">⚽</span> Fixtures & Predict.  <span class="accent">│</span>
-<span class="accent">│</span>  <span class="yellow">📈</span> Team Deep Dive       <span class="accent">│</span>
-<span class="accent">│</span>  <span class="yellow">⚔️</span> H2H Comparison       <span class="accent">│</span>
-<span class="accent">│</span>                         <span class="accent">│</span>
-<span class="accent">│</span>  <span class="dim">Radar · Plotly · Form</span>  <span class="accent">│</span>
-<span class="accent">│</span>  <span class="dim">Caching · SQLAlchemy</span>   <span class="accent">│</span>
-<span class="accent">│</span>                         <span class="accent">│</span>
-<span class="accent">└──────────┬──────────────┘</span>
-           <span class="dim">│</span>
-     <span class="red">PostgreSQL</span> (AWS RDS)</div>
+                <span class="accent">┌─────────────────────────┐</span>
+                <span class="accent">│</span> <span class="green">Streamlit Dashboard</span> <span
+                  class="accent">│</span>
+                <span class="accent">├─────────────────────────┤</span>
+                <span class="accent">│</span> <span class="accent">│</span>
+                <span class="accent">│</span> <span class="yellow">📊</span> Home & League Stats <span
+                  class="accent">│</span>
+                <span class="accent">│</span> <span class="yellow">⚽</span> Fixtures & Predict. <span
+                  class="accent">│</span>
+                <span class="accent">│</span> <span class="yellow">📈</span> Team Deep Dive <span
+                  class="accent">│</span>
+                <span class="accent">│</span> <span class="yellow">⚔️</span> H2H Comparison <span
+                  class="accent">│</span>
+                <span class="accent">│</span> <span class="accent">│</span>
+                <span class="accent">│</span> <span class="dim">Radar · Plotly · Form</span> <span
+                  class="accent">│</span>
+                <span class="accent">│</span> <span class="dim">Caching · SQLAlchemy</span> <span
+                  class="accent">│</span>
+                <span class="accent">│</span> <span class="accent">│</span>
+                <span class="accent">└──────────┬──────────────┘</span>
+                <span class="dim">│</span>
+                <span class="red">PostgreSQL</span> (AWS RDS)
+              </div>
             </div>
           </div>
         </div>
@@ -799,10 +1041,10 @@
               <h3>Trading Performance Dashboard</h3>
               <p>
                 A high-performance web dashboard for analyzing trading results, <strong>built
-                entirely with AI coding agents</strong>. Features 16 key performance indicators,
+                  entirely with AI coding agents</strong>. Features 16 key performance indicators,
                 equity curves, calendar heatmaps, trade duration analysis, and an advanced
                 tagging system. Demonstrates the ability to <strong>architect, direct, and
-                ship a complete full-stack application</strong> by leveraging AI agents —
+                  ship a complete full-stack application</strong> by leveraging AI agents —
                 from defining specifications and reviewing generated code to debugging
                 and iterating on a production-quality result.
               </p>
@@ -823,21 +1065,26 @@
             </div>
             <div class="project-visual">
               <div class="project-diagram">
-<span class="accent">🤖 AI Coding Agent</span>
-  <span class="dim">│</span>
-  <span class="dim">│</span>  <span class="green">Spec</span> → <span class="yellow">Prompt</span> → <span class="red">Review</span>
-  <span class="dim">│</span>  <span class="green">Debug</span> → <span class="yellow">Iterate</span> → <span class="red">Ship</span>
-  <span class="dim">│</span>
-  <span class="dim">▼</span>
-<span class="accent">┌─────────────────────────┐</span>
-<span class="accent">│</span>  <span class="green">Frontend</span>  <span class="dim">│</span>  <span class="red">Backend</span>   <span class="accent">│</span>
-<span class="accent">│</span>  React     <span class="dim">│</span>  FastAPI   <span class="accent">│</span>
-<span class="accent">│</span>  Tailwind  <span class="dim">│</span>  Polars    <span class="accent">│</span>
-<span class="accent">│</span>  Recharts  <span class="dim">│</span>  CSV Parse <span class="accent">│</span>
-<span class="accent">└─────────────────────────┘</span>
-           <span class="dim">│</span>
-     <span class="yellow">16 KPIs · Heatmap</span>
-     <span class="yellow">Equity · Tags</span></div>
+                <span class="accent">🤖 AI Coding Agent</span>
+                <span class="dim">│</span>
+                <span class="dim">│</span> <span class="green">Spec</span> → <span class="yellow">Prompt</span> → <span
+                  class="red">Review</span>
+                <span class="dim">│</span> <span class="green">Debug</span> → <span class="yellow">Iterate</span> →
+                <span class="red">Ship</span>
+                <span class="dim">│</span>
+                <span class="dim">▼</span>
+                <span class="accent">┌─────────────────────────┐</span>
+                <span class="accent">│</span> <span class="green">Frontend</span> <span class="dim">│</span> <span
+                  class="red">Backend</span> <span class="accent">│</span>
+                <span class="accent">│</span> React <span class="dim">│</span> FastAPI <span class="accent">│</span>
+                <span class="accent">│</span> Tailwind <span class="dim">│</span> Polars <span class="accent">│</span>
+                <span class="accent">│</span> Recharts <span class="dim">│</span> CSV Parse <span
+                  class="accent">│</span>
+                <span class="accent">└─────────────────────────┘</span>
+                <span class="dim">│</span>
+                <span class="yellow">16 KPIs · Heatmap</span>
+                <span class="yellow">Equity · Tags</span>
+              </div>
             </div>
           </div>
         </div>
@@ -876,11 +1123,7 @@
 
       <div class="github-graph fade-in">
         <a href="https://github.com/KwachuQ" target="_blank" rel="noopener">
-          <img
-            src="https://ghchart.rshah.org/22C55E/KwachuQ"
-            alt="KwachuQ's GitHub contribution chart"
-            loading="lazy"
-          >
+          <img src="https://ghchart.rshah.org/22C55E/KwachuQ" alt="KwachuQ's GitHub contribution chart" loading="lazy">
         </a>
       </div>
     </div>
@@ -929,7 +1172,8 @@
         <a href="https://github.com/KwachuQ" target="_blank" rel="noopener" title="GitHub">
           <i class="fa-brands fa-github"></i>
         </a>
-        <a href="https://github.com/KwachuQ/Football-dashboard-app" target="_blank" rel="noopener" title="Football Dashboard">
+        <a href="https://github.com/KwachuQ/Football-dashboard-app" target="_blank" rel="noopener"
+          title="Football Dashboard">
           <i class="fa-solid fa-futbol"></i>
         </a>
         <a href="https://football-dashboard-app.streamlit.app/Home" target="_blank" rel="noopener" title="Live Demo">
@@ -979,4 +1223,5 @@
     });
   </script>
 </body>
+
 </html>
