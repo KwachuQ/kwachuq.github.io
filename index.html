@@ -216,11 +216,16 @@
     }
 
     .hero .bio {
-      max-width: 560px;
+      max-width: 800px;
       color: var(--text-dim);
       font-size: .95rem;
       margin-bottom: 36px;
       line-height: 1.8;
+      text-align: justify;
+    }
+
+    .hero .bio strong {
+      color: #fff;
     }
 
     .hero-links {
@@ -278,10 +283,11 @@
       color: var(--text-dim);
       margin-bottom: 16px;
       font-size: .95rem;
+      text-align: justify;
     }
 
     .about-text p strong {
-      color: var(--text);
+      color: #fff;
     }
 
     .about-highlights {
@@ -782,19 +788,37 @@
         <span class="hero-greeting">Hi, my name is</span>
         <h1>Łukasz <span class="highlight">Kwaśniewski</span></h1>
         <p class="tagline">Python Developer &bull; AI SDLC &bull; Data Analytics &bull; Data Engineering</p>
-        <p class="bio">
-          I'm a professional trader with years of experience in the financial markets. While my day-to-day career is
-          focused on trading,
-          I have developed a strong passion for data engineering and software development — driven by a desire to solve
-          real problems with code.
-          My projects reflect two things: trading performance analysis and football analytics. I've built
-          production-grade data pipelines and interactive dashboards from scratch using Python and its ecosystem. I also
-          leverage AI coding agents to
-          architect and ship full-stack applications — combining domain expertise with modern AI-assisted development
-          workflows.
-          I'm looking for opportunities in Data Engineering or Python Development where I can apply my analytical
-          mindset, self-taught programming skills, and relentless drive to learn and ship quality software.
-        </p>
+        <div class="bio">
+          <p>
+            I'm a <strong>professional trader</strong> with years of experience in the financial markets. While my
+            day-to-day career is
+            focused on trading, I have developed a strong passion for <strong>software development</strong> and
+            <strong>data engineering</strong> — driven
+            by a desire to solve
+            real problems with code.
+          </p>
+          <p style="margin-top: 12px;">
+            My projects reflect two things:
+          </p>
+          <ul style="margin-top: 8px; margin-bottom: 12px; margin-left: 20px;">
+            <li style="margin-bottom: 4px;"><strong>Trading performance analysis</strong></li>
+            <li><strong>Football analytics</strong></li>
+          </ul>
+          <p>
+            I've built production-grade data pipelines and interactive dashboards from scratch using
+            <strong>Python</strong> and its
+            ecosystem. I also
+            leverage <strong>AI coding agents</strong> to architect and ship <strong>full-stack applications</strong> —
+            combining domain expertise with
+            modern AI-assisted development
+            workflows.
+          </p>
+          <p style="margin-top: 12px;">
+            I'm looking for opportunities in <strong>Data Engineering</strong> or <strong>Python Development</strong>
+            where I can apply my <strong>analytical
+              mindset</strong>, self-taught programming skills, and relentless drive to learn and ship quality software.
+          </p>
+        </div>
         <div class="hero-links">
           <a href="#projects" class="btn btn-primary">
             <i class="fa-solid fa-code"></i> View Projects
@@ -815,34 +839,33 @@
       <div class="about-grid">
         <div class="about-text fade-in">
           <p>
-            I'm a <strong>professional trader</strong> with years of experience in the financial markets.
-            While my day-to-day career is focused on trading, I have developed a strong passion
-            for <strong>data engineering</strong> and <strong>software development</strong> — driven by
-            a desire to solve real problems with code.
+            My professional path started well outside tech, across trading, insurance, and business operations, where I
+            developed strong <strong>analytical instincts</strong>, a structured approach to problem-solving, and
+            confidence in making decisions under pressure. Over time, that foundation led me into programming and data
+            work, because software gave me a practical way to turn complex processes into systems that are measurable,
+            scalable, and easier to improve.
           </p>
           <p>
-            My projects reflect two things I care deeply about: <strong>football analytics</strong> and
-            <strong>trading performance analysis</strong>. I've built production-grade data pipelines
-            and interactive dashboards from scratch, and I also leverage <strong>AI coding agents</strong>
-            to architect and ship full-stack applications — combining domain expertise with
-            modern AI-assisted development workflows.
+            Today, that transition is being strengthened through formal engineering development. Through the
+            <strong>EPAM Python Engineering program</strong>, I am deepening my skills in backend development, database
+            design, cloud fundamentals, engineering standards, and AI-supported delivery practices in a professional,
+            production-oriented environment. At the same time, I am participating in <strong>AI/Run Mission 2026: Build
+              Your AI Factory</strong>, which focuses on building hands-on fluency in AI-powered software delivery,
+            cross-role collaboration, and AI Factory ways of working aligned with EPAM’s Frontier-level AI maturity
+            model.
           </p>
           <p>
-            Beyond building robust infrastructure, I deeply enjoy the <strong>data analysis</strong> aspect of my work.
-            Whether it is exploring advanced football data, evaluating performance trends in my trading journal,
-            or designing interactive visualizations with Streamlit and Plotly, I thrive on translating raw datasets into
-            actionable insights.
-          </p>
-          <p>
-            I'm looking for opportunities in <strong>Data Engineering</strong>, <strong>Data Analysis</strong>, or
-            <strong>Python Development</strong>
-            where I can apply my analytical mindset, self-taught programming skills, and relentless
-            drive to discover insights and ship quality software.
+            What motivates me most is building practical tools around workflows I understand deeply. That has led me to
+            create projects in trading analytics, football data, and automation, where I combine Python, SQL,
+            dashboards, and full-stack development to solve real problems and turn raw data into useful insight. I am
+            looking for opportunities in <strong>Data Engineering, Data Analysis, or Python development</strong> where I
+            can keep growing as an engineer while contributing with ownership, curiosity, and a strong analytical
+            mindset.
           </p>
         </div>
         <div class="about-highlights fade-in">
           <div class="highlight-card">
-            <span class="number">3</span>
+            <span class="number">4</span>
             <span class="label">Public Projects</span>
           </div>
           <div class="highlight-card">
@@ -854,7 +877,7 @@
             <span class="label">Technologies Used</span>
           </div>
           <div class="highlight-card">
-            <span class="number">1</span>
+            <span class="number">2</span>
             <span class="label">Live Deployment</span>
           </div>
         </div>
@@ -924,6 +947,65 @@
       <p class="section-subtitle fade-in">Real-world applications built from scratch</p>
 
       <div class="projects-list">
+
+        <!-- Project 0: Trading Process Automation -->
+        <div class="project-card fade-in"
+          style="border-color: rgba(34, 197, 94, 0.5); box-shadow: 0 4px 20px rgba(34, 197, 94, 0.05);">
+          <div class="project-card-inner">
+            <div class="project-info">
+              <span class="project-label">Full-Stack Workflow Automation</span>
+              <h3>Trading Process Automation (TAP)</h3>
+              <p>
+                A locally deployed decision-support system for intraday Futures trading.
+                Replacing a manual workflow with this platform <strong>reduced my daily preparation and review time from
+                  2 hours to 15 minutes</strong> and
+                <strong>increased my process goals completion by 40%</strong> by helping maintain focus on the right
+                context.
+              </p>
+              <p style="margin-bottom: 20px; line-height: 1.7; color: var(--text-dim); font-size: .9rem;">
+                The Python/FastAPI backend automatically ingests Sierra Chart exports and market data to generate
+                self-contained HTML pre-market reports.
+                During live sessions, a background poller evaluates the market regime via a weighted rules engine,
+                displayed on a React/Tailwind SPA.
+                Post-session, it imports trade logs and auto-tags them against session snapshots using SQLite
+                feature-store rules.
+              </p>
+              <div class="project-tech">
+                <span>Python 3.11+</span>
+                <span>FastAPI</span>
+                <span>React 19</span>
+                <span>Tailwind CSS 4</span>
+                <span>SQLite</span>
+                <span>pandas</span>
+                <span>yfinance</span>
+                <span>pytest</span>
+              </div>
+              <div class="project-links" style="margin-top: 16px; align-items: center;">
+                <a href="https://github.com/KwachuQ/trading_automation_process_demo" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-github"></i> Source Code
+                </a>
+                <a href="https://trading-automation-process-demo.vercel.app/" target="_blank" rel="noopener"
+                  class="btn btn-primary" style="padding: 10px 20px; font-size: .85rem;">
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i> View Live Demo
+                </a>
+              </div>
+            </div>
+            <div class="project-visual">
+              <div class="project-diagram">
+                <span class="accent">Sierra Chart & Market Data</span>
+                <span class="dim">│</span>
+                <span class="dim">▼</span>
+                <span class="yellow">[ FastAPI Backend ]</span> ── Polling & Rules Engine
+                <span class="dim">│</span>
+                <span class="dim">▼</span>
+                <span class="green">React SPA</span> ── Dashboard & Reports
+                <span class="dim">│</span>
+                <span class="dim">▼</span>
+                <span class="red">SQLite</span> ── Auto-tagged Trade Export
+              </div>
+            </div>
+          </div>
+        </div>
 
         <!-- Project 1: Football Data Pipeline -->
         <div class="project-card fade-in">
